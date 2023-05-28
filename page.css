@@ -32,6 +32,16 @@
 h1{
 text-align: center;
 }
+
 p{
   text-align: center;
+}
+
+footer {
+  position:relative;
+  float: left;
+  width: 100%;
+  background-color: #cccccc;
+  text-align:center;
+  font-style: italic;
 }
