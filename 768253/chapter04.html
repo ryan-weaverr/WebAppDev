@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="chapter04style.css">
+
+  <script>
+    let rCount = 0;
+    let bCount = 0;
+    let gCount = 0;
+    let buttonChangeCount = 0;
+
+    function changeColor(color) 
+    {
+      document.body.style.backgroundColor = color;
+
+      if(color === 'red') 
+      {
+        rCount++;
+        document.getElementById('rCount').innerHTML = 'RED count: ' + rCount;
+      }
+      if(color === 'blue') 
+      {
+        bCount++;
+        document.getElementById('bCount').innerHTML = 'BLUE count: ' + bCount;
+      }
+      if(color === 'green') 
+      {
+        gCount++;
+        document.getElementById('gCount').innerHTML = 'GREEN count: ' + gCount;
+      } 
+    }
+
+    function changeButtonColor(event) 
+    {
+      const button = event.target;
+
+      if(button.style.backgroundColor === 'white')
+      {
+        button.style.color = 'white';
+        button.style.backgroundColor = 'black';
+      }
+      else
+      {
+        button.style.color = 'black';
+        button.style.backgroundColor = 'white';
+      } 
+
+      buttonChangeCount++;
+      document.getElementById('buttonChangeCount').innerHTML = 'Button color changes: ' + buttonChangeCount;
+    }
+  </script>
+</head>
+
+<body>
+    <button class="button" onclick="changeColor('red')" onmouseover="changeButtonColor(event)">RED</button>
+    <button class="button" onclick="changeColor('blue')" onmouseover="changeButtonColor(event)">BLUE</button>
+    <button class="button" onclick="changeColor('green')" onmouseover="changeButtonColor(event)">GREEN</button>
+
+    <div class="counter" id="rCount">RED count: 0</div>
+    <div class="counter" id="bCount">BLUE count: 0</div>
+    <div class="counter" id="gCount">GREEN count: 0</div>
+    <div class="counter" id="buttonChangeCount">Button color changes: 0</div>
+   
+</body>
+
+</html>
