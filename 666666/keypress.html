@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Christopher Weaver - Home</title>
+  <link rel="stylesheet" href="keypress.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">Christopher Weaver</a></div>
+        <ul class="links">
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="#" class="desktop-link">Class Assignments</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Class Assignments</label>
+            <ul>
+              <li><a href='../1234/page1.html'>Info Page</a></li>
+              <li><a href="../helloworld.php">Hello World PHP Test</a></li>
+              <li><a href="../457228/ButtonMove.html">Button Move Assignment</a></li>
+              <li><a href="../666777/sort.html">Sort Demo</a></li>
+              <li><a href="../666666/keypress.html">KeyPress Demo</a></li>
+              <li><a href="../4567/cards.html">Card Demo</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+  <div class="dummy-text">
+
+  <title>Displaying Keypresses</title>
+<script type="text/javascript">
+    function displayKey(e) 
+    {
+       if (e.keyCode) 
+       {
+          var keycode = e.keyCode;
+       } else 
+       {
+          var keycode = e.which;
+       }
+       character = String.fromCharCode(keycode);
+       character = character.toLowerCase();
+       var keysParagraph = document.getElementById('keys');
+   
+       if (/[aeiou]/i.test(character)) 
+       { 
+          character = character.toUpperCase();
+       } else if (character === 'r') 
+       {
+          document.body.style.backgroundColor = 'red';
+          document.body.style.color = 'white';
+       } else if (character === 'g') 
+       {
+          document.body.style.backgroundColor = 'green';
+          document.body.style.color = 'white';
+       } else if (character === 'b') 
+       {
+          document.body.style.backgroundColor = 'blue';
+          document.body.style.color = 'white';
+       }
+   
+       keysParagraph.innerHTML += character;
+    }
+   </script>
+  </head>
+  <body onkeypress="displayKey(event)">
+    <h1>Displaying Typed Characters</h1>
+    <p>This document includes a simple script that displays 
+    the keys you type as a new paragraph below. Type a few keys 
+    to try it. </p>
+    <div id="keys"></div>
+  </body>
+
+    
+  </div>
+</body>
+</html>

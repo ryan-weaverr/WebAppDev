@@ -33,15 +33,33 @@ h1{
 text-align: center;
 }
 
-p{
+#controls {
+  margin-top: 20px;
   text-align: center;
 }
 
-footer {
-  position:relative;
-  float: left;
-  width: 100%;
-  background-color: #cccccc;
+#viewingArea {
+  background-color: black;
+  width: 75%;
+  height: 75vh;
+  margin: 20px auto;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  padding: 10px;
+  border: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+#total {
   text-align:center;
-  font-style: italic;
+  margin-top: 10px;
+}
+
+#moveButton {
+  margin-right: 10px;
 }
